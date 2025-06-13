@@ -1,0 +1,13 @@
+{
+  "name": "Python & Jupyter",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/python-poetry:1": {}
+  },
+  "postCreateCommand": "pip install jupyter pandas matplotlib scikit-learn seaborn",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-toolsai.jupyter", "ms-python.python"]
+    }
+  }
+}
