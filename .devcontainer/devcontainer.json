@@ -11,3 +11,14 @@
     }
   }
 }
+{
+  "name": "R DevContainer",
+  "image": "rocker/rstudio:latest",
+  "postCreateCommand": "R -e \"install.packages(c('ggplot2', 'dplyr', 'tidyverse'), repos='http://cran.rstudio.com/')\"",
+  "customizations": {
+    "vscode": {
+      "extensions": ["Ikuyadeu.r"]
+    }
+  },
+  "forwardPorts": [8787]
+}
