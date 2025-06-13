@@ -1,12 +1,16 @@
 {
-  "name": "Python DevContainer",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "pip install jupyter pandas matplotlib scikit-learn seaborn",
+  "name": "Python + R + Markdown DevContainer",
+  "image": "rocker/r-base",  
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y r-base && pip install jupyter pandas matplotlib scikit-learn seaborn",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python",
+        "Ikuyadeu.r",
         "yzhang.markdown-all-in-one"
       ]
     }
