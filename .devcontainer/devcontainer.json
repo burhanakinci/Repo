@@ -1,20 +1,14 @@
 {
-  "name": "Python + R + Markdown DevContainer",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {},
-    "ghcr.io/devcontainers/features/r:1": {}
-  },
-  "postCreateCommand": "pip install jupyter pandas matplotlib scikit-learn seaborn && R -e \"install.packages(c('ggplot2', 'dplyr', 'tidyverse'), repos='http://cran.rstudio.com/')\"",
+  "name": "Python DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install jupyter pandas matplotlib scikit-learn seaborn",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-toolsai.jupyter",
         "ms-python.python",
-        "Ikuyadeu.r",
         "yzhang.markdown-all-in-one"
       ]
     }
-  },
-  "featuresRepo": "https://github.com/devcontainers/features"
+  }
 }
